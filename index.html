@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukraine's got talant</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./pages/finalPage.html">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <h1>Ukraine's got talant</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="banner">
+                <div class="container">
+                    <div class="banner-pseudocontent">
+                        <a href="/index.html">
+                            <img class="show-name-fixed" src="./source/show-name-fixed.webp" alt="show-name">
+                        </a>
+                        <div class="start-wrapper display-dsk">
+                            <button class="start-btn" id="modal-open">
+                                Create tournament
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dialog id="modal-dialog">
+                <div class="dialog-content">
+                    <h2>Here you can enter the number of participants in the show</h2>
+                    <label for="participants" class="participants-count">
+                        Number of participants
+                        <input type="number" name="participants" id="participants" min="20" max="50" value="20">
+                    </label>
+                    <a href="./pages/table.html" class="create-btn">Let's start</a>
+                </div>
+            </dialog>
+        </section>
+        <section class="none-dsk">
+            <div class="start-wrapper">
+                <button class="start-btn" id="modal-open">
+                    Create tournament
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <p>&copy; 2023 Україна має талант</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.table-wrapper {
+    width: min(900px, 100% - 3rem);
+}
+
+table {
+    width: 100%;
+    border-radius: 8px;
+    border-collapse: collapse;
+    background: #444;
+    opacity: .9;
+}
+
+caption,
+th,
+td {
+    padding: 16px;
+    text-align: center;
+    line-height: 1.5;
+    color: white;
+}
+
+caption {
+    font-family: 'Rampart One';
+    font-weight: 700;
+    font-size: 25px;
+
+    margin: 20px 0;
+    border-radius: 35px 35px 90px 90px;
+    background: #444;
+    opacity: .9;
+}
+
+@media screen and (min-width: 768px) {
+    caption {
+        font-size: 35px;
+    }
+}
+
+
+tr:nth-of-type(2n) {
+    background: hsl(0% 0% 05 / 0.1);
+}
+
+@media only screen and (max-width: 650px) {
+    th {
+        display: none;
+    }
+
+    td {
+        display: grid;
+        grid-template-columns: 15ch auto;
+    }
+
+    td::before {
+        font-weight: 700;
+        text-transform: capitalize;
+        content: attr(data-cell) ": ";
+    }
+}
+
+.btn-container {
+    padding: 25px 0;
+}
+
+.main-bg {
+    background-image: url(../source/banner.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.edit-btn,
+.check-btn {
+    width: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.cell-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.table-input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: white;
+    height: 22px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.participants-table td:nth-child(1) {
+    width: 50px;
+}
+
+.participants-table td:not(:nth-child(1)) {
+    padding: 0;
+    width: 555px;
+}
+
+.random-btn {
+    margin-top: 15px;
+}
+
+.randomMark {
+    margin-top: 15px;
+}
+
+.cell-mark {
+    width: 225px;
+}
+
+.judges-table td {
+    width: 50%;
+}

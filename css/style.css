@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #FFD700;
+}
+
+header h1 {
+    font-family: 'Rampart One', cursive;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #16294a;
+}
+
+.header {
+    padding: 10px 0;
+}
+
+.banner {
+    background-image: url('../source/banner.webp');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-pseudocontent {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.show-name-fixed {
+    position: static;
+}
+
+.start-wrapper {
+    padding: 24px;
+    background-color: rgba(17, 34, 62, .75);
+}
+
+.banner-heading {
+    margin-bottom: 24px;
+    max-width: 350px;
+    font-size: 30px;
+    color: #FFD700;
+}
+
+.start-btn {
+    font-family: 'Rampart One', cursive;
+    font-weight: 700;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 0;
+    width: 100%;
+    color: #16294a;
+    background-color: #FFD700;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    animation: tilt-n-move-shaking infinite ease 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #16294a;
+    color: #FFD700;
+    animation: none;
+}
+
+#modal-dialog {
+    margin: auto;
+    border: 0;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 350px;
+}
+
+.dialog-content h2,
+.dialog-content label {
+    color: #16294a;
+}
+
+input[type=number] {
+    border: 0;
+    border-radius: 3px;
+    padding: 2px;
+    width: 30%;
+    transition: all 1s ease;
+    outline: #16294a auto 1px;
+}
+
+input[type=number]:focus-visible {
+    border: 0;
+    transform: scale(1.1);
+    outline: #16294a auto 2px;
+}
+
+.create-btn {
+    color: #16294a;
+    transition: all .3s ease;
+}
+
+.create-btn:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.participants-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+
+    75% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+footer {
+    text-align: center;
+    color: #16294a;
+    background-color: #FFD700;
+}
+
+.footer {
+    padding: 24px 0;
+}
+
+.display-dsk {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        background-attachment: fixed;
+    }
+
+    .show-name-fixed {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+
+    header h1 {
+        font-size: 35px;
+    }
+
+    .start-wrapper {
+        position: absolute;
+        left: 0;
+        width: 350px;
+    }
+
+    .none-dsk {
+        display: none;
+    }
+
+    .display-dsk {
+        display: block;
+    }
+
+    .start-btn {
+        font-size: 25px;
+    }
+
+    .start-wrapper {
+        border-radius: 8px;
+    }
+
+    .banner-pseudocontent {
+        height: 90vmin;
+    }
+}

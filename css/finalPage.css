@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:wght@400;700&display=swap');
+@import url(../css/style.css);
+
+
+* {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-image: url(../source/scene.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100wv;
+    height: 100vh;
+    background: linear-gradient( #243B55, #16294ad9);
+}
+
+
+/* HEADER */
+
+header {
+    opacity: 0;
+    animation-name: opacity;
+    animation-duration: 1.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.header h1 {
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 24px auto 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+/* TABLE */
+
+.table {
+    font-weight: 700;
+    padding: 0 12px;
+    width: 100%;
+}
+
+.winner {
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px auto;
+    padding: 24px 48px 24px 48px;
+    border-radius: 8px;
+    max-width: 650px;
+    opacity: 0;
+    color: #16294a;
+    background-color: #FFD700;
+    animation-name: winners;
+    animation-duration: 1.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+.winner .number {
+    padding: 0 24px;
+}
+
+.winner .name {
+    padding: 0 24px;
+}
+
+.winner .mark {
+    padding: 0 24px;
+}
+
+.winner .talant {
+    padding: 0 24px;
+}
+
+.second {
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px auto;
+    padding: 24px 48px 24px 48px;
+    border-radius: 8px;
+    max-width: 650px;
+    opacity: 0;
+    color: #16294a;
+    background-color: #FFD700;
+    animation-name: winners;
+    animation-duration: 1.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.second .number {
+    padding: 0 24px;
+}
+
+.second .name {
+    padding: 0 24px;
+}
+
+.second .mark {
+    padding: 0 24px;
+}
+
+.second .talant {
+    padding: 0 24px;
+}
+
+.third {
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px auto;
+    padding: 24px 48px 24px 48px;
+    max-width: 650px;
+    border-radius: 8px;
+    opacity: 0;
+    color: #16294a;
+    background-color: #FFD700;
+    animation-name: winners;
+    animation-duration: 1.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+
+.third .number {
+    padding: 0 24px;
+}
+
+.third .name {
+    padding: 0 24px;
+}
+
+.third .mark {
+    padding: 0 24px;
+}
+
+.third .talant {
+    padding: 0 24px;
+}
+
+
+/* BUTTON */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    padding: 0 24px;
+    opacity: 0;
+    animation-name: opacity;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.back-btn {
+    font-family: 'Rampart One', cursive;
+    font-weight: 700;
+    font-size: 20px;
+
+    display: block;
+    padding: 10px 24px;
+    border: 0;
+    border-radius: 8px;
+    color: #16294a;
+    background-color: #FFD700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    opacity: 0.8;
+    animation: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #FFD700;
+    bottom: 0;
+    opacity: 0;
+    animation-name: opacity;
+    animation-duration: 1.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    /* padding: 12px 0; */
+}
+
+
+/* ANIMATION */
+
+@keyframes winners {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    100% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+}
